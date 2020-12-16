@@ -22,10 +22,10 @@ class CreateGlassesTable extends Migration
             $table->string('barium');
             $table->string('attribute_class');
             $table->string('type_consult');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('project_id');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('project_id')->references('id')->on('projects')
                 ->onDelete('cascade');
         });
     }

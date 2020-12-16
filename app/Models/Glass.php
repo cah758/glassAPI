@@ -19,10 +19,12 @@ class Glass extends Model
     ];
 
 
-    public function user()
+
+
+    public function project()
     {
         //return $this->belongsTo(Client::class);
-        return $this->belongsTo('App\Models\User','user_id', 'id');
+        return $this->belongsTo('App\Models\Project','project_id', 'id');
 
     }
 }

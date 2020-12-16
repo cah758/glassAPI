@@ -28,6 +28,13 @@ Route::group([
         Route::post('userUpdate', 'App\Http\Controllers\AuthController@update');
 
 
+        Route::post('createProject', 'App\Http\Controllers\ProjectController@create');
+        Route::post('updateProject', 'App\Http\Controllers\ProjectController@update');
+        Route::get('destroyProject', 'App\Http\Controllers\ProjectController@destroy');
+        Route::get('projects', 'App\Http\Controllers\ProjectController@projects');
+
+
+
         Route::post('createGlass', 'App\Http\Controllers\GlassController@create');
         Route::get('destroyGlass', 'App\Http\Controllers\GlassController@destroy');
         Route::get('glass', 'App\Http\Controllers\GlassController@glass');

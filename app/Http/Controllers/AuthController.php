@@ -17,12 +17,14 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users',
+            'collegiate' => 'required|string|unique:users',
             'password' => 'required|string'
         ]);
 
         User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'collegiate' => $request->collegiate,
             'password' => bcrypt($request->password)
         ]);
 
