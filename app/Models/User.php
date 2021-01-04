@@ -42,8 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function glass()
+    public function projects()
     {
-        return $this->hasMany('App\Models\Glass');
+        return $this->hasMany('App\Models\Project');
     }
 }

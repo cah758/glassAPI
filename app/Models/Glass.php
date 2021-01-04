@@ -15,7 +15,7 @@ class Glass extends Model
      *
      */
     protected $fillable = [
-        'refractive_index', 'sodium', 'magnesium', 'aluminum', 'barium','attribute_class','type_consult', 'user_id'
+        'refractive_index', 'sodium', 'magnesium', 'aluminum', 'barium','attribute_class','type_consult', 'project_id'
     ];
 
 
