@@ -10,11 +10,13 @@ class ProjectController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'state' => 'required',
+            'name' => 'required'
         ]);
 
-        Project::create($request->all());
+        if ($request->state =="") {
+          $request->state = false;
+        }
+        Project::create(['name'=> $request->name ,'state'=> $request->state,'user_id' => $request->user()->id]);
 
         return response()->json([
             'message' => 'Successfully created glass!'
@@ -44,5 +46,9 @@ class ProjectController extends Controller
     public function projects(Request $request)
     {
         return response()->json($request->user()->projects);
+    }
+    public function project($id)
+    {
+        //TODO
     }
 }

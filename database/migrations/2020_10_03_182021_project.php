@@ -16,7 +16,7 @@ class Project extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('state');
+            $table->boolean('state')->default(false);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

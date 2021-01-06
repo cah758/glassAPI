@@ -18,7 +18,7 @@ class GlassController extends Controller
             'barium' => 'required',
             'attribute_class' => 'required',
             'type_consult' => 'required',
-            'user_id' => 'required',
+            'project_id' => 'required',
         ]);
 
         Glass::create($request->all());
@@ -37,6 +37,6 @@ class GlassController extends Controller
 
     public function glass(Request $request)
     {
-        return response()->json($request->user()->glass);
+      //TODO
     }
 }
