@@ -28,10 +28,12 @@ Route::group([
         Route::post('userUpdate', 'App\Http\Controllers\AuthController@update');
 
 
+
         Route::post('createProject', 'App\Http\Controllers\ProjectController@create');
         Route::post('updateProject', 'App\Http\Controllers\ProjectController@update');
         Route::get('destroyProject', 'App\Http\Controllers\ProjectController@destroy');
         Route::get('projects', 'App\Http\Controllers\ProjectController@projects');
+        Route::get('project/{id}', 'App\Http\Controllers\ProjectController@project');
 
 
 

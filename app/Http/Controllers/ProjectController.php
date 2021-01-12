@@ -47,8 +47,8 @@ class ProjectController extends Controller
     {
         return response()->json($request->user()->projects);
     }
-    public function project($id)
+    public function project(Request $request, $id)
     {
-        //TODO
+        return response()->json(Project::find($id)->glass);
     }
 }
